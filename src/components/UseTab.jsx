@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 
 const content = [
-  {
+	{
 		tab : 'section1',
 		content : 'section1 is here'
 	},
@@ -26,13 +26,14 @@ export default function UseTab() {
 	const {currentItem, chageItem} = useTabs(0,content);
 
 
-  return (
-    <div>
+	return (
+		<div>
 			<h1>UseTab</h1>
 			{content && content.map((section,i)=>(
 				<button key={i} onClick={()=>chageItem(i)}>{section.content}</button>
 			))}
 			<div>{currentItem.content}</div>
+			<hr/>
 		</div>
-  )
+	)
 }
